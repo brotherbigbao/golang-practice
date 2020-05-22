@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main2() {
 	var s []int
 	fmt.Println(len(s))
 	fmt.Println(cap(s))

@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main4() {
 	s := make([]string, 10, 1000)
 	for k,v := range s {
 		fmt.Println(k, v)

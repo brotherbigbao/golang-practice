@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main3() {
 	//一个nil值的slice的行为和其它任意0长度的slice一样
 
 	s := []int{}
