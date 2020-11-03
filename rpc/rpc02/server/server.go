@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/liuyibao/golang-learn/rpc/rpc03/rpclib"
+	"github.com/liuyibao/golang-learn/rpc/rpc02/rpclib"
 	"log"
 	"net"
 	"net/rpc"

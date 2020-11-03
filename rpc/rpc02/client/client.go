@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/liuyibao/golang-learn/rpc/rpc03/rpclib"
+	"github.com/liuyibao/golang-learn/rpc/rpc02/rpclib"
 	"log"
 )
 
