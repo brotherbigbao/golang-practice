@@ -3,15 +3,19 @@ package main
 import (
 	"fmt"
 	"log"
+	"net"
 	"net/rpc"
+	"net/rpc/jsonrpc"
 )
 
 //RPC客户端
 func main() {
-	client, err := rpc.Dial("tcp", "localhost:1234")
+	conn, err := net.Dial("tcp", "localhost:1234")
 	if err != nil {
 		log.Fatal("dialing:", err)
 	}
+
+	client := rpc.NewClientWithCodec(jsonrpc.NewClientCodec(conn))
 
 	var reply string
 	err = client.Call("HelloService.Hello", "liuyibao", &reply)
