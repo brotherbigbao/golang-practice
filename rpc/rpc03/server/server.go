@@ -24,7 +24,6 @@ func main() {
 	}
 
 	log.Println("serveConn before")
-	rpc.ServeConn(conn)
 	rpc.ServeCodec(jsonrpc.NewServerCodec(conn))
 	log.Println("serveConn After")
 
