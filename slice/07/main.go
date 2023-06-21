@@ -3,7 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	var s []int
+	s := make([]int, 0)
+
 	fmt.Println(len(s))
 	fmt.Println(cap(s))
 	if s == nil {
@@ -12,6 +13,12 @@ func main() {
 		fmt.Println("s is not nil.")
 	}
 
-	//s2 := s[:3]
-	//fmt.Println(s2)
+	s = append(s, 3)
+	fmt.Println(len(s))
+	fmt.Println(cap(s))
+	if s == nil {
+		fmt.Println("s is nil.")
+	} else {
+		fmt.Println("s is not nil.")
+	}
 }
