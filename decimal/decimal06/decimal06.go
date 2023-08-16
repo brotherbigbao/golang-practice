@@ -22,6 +22,12 @@ func main() {
 	if IsEqualFloat64(a, b) {
 		fmt.Println("equal")
 	}
+
+	if 0.1 < 0.1 {
+		fmt.Println("0.1 < 0.1")
+	} else {
+		fmt.Println("0.1 = 0.1")
+	}
 }
 
 func IsEqualFloat64(floatValue1 float64, floatValue2 float64) bool {
