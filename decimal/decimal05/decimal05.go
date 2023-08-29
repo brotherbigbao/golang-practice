@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	decimalRoundDebug("3.01")
+	decimalRoundDebug("3.unique_id")
 	fmt.Println("==========")
 	decimalRoundDebug("3.05")
 	fmt.Println("==========")
