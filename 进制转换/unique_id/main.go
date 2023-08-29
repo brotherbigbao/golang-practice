@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"strconv"
+	"time"
 )
 
 func main() {
@@ -27,4 +28,13 @@ func main() {
 	fmt.Println(str[0:45], " 11位空缺+29位时间戳+5位业务线")
 	fmt.Println(str[0:48], " 11位空缺+29位时间戳+5位业务线+3位机器ID")
 	fmt.Println(str[0:64], " 11位空缺+29位时间戳+5位业务线+3位机器ID+16位随机数")
+
+	//计算id生成的时间
+	seconds, err := strconv.ParseUint(str[11:40], 2, 64)
+	if err != nil {
+		fmt.Println("获取秒数失败")
+		return
+	}
+	t := time.Unix(int64(seconds)+1556640000, 0)
+	fmt.Println(t.Format("2006-01-02 15:04:05"))
 }
